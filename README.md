@@ -1,3 +1,5 @@
+# Projeto - BlackJack
+
 ## Objetivos do Sistema
 O objetivo principal do sistema é conseguir, através da linguagem Java, replicar um jogo padrão de Blackjack ou 21. Que por sua vez, possui como finalidade ter mais pontos do que o adversário, mas sem ultrapassar os 21 pontos.
 
