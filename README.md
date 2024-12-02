@@ -5,7 +5,6 @@ O objetivo principal do sistema é conseguir, através da linguagem Java, replic
 
 Para alcançar nosso objetivo principal, temos como objetivo secundário: a realização e implementação das funcionalidades do jogo descritas no tópico abaixo.
 
-
 ### Funcionalidades
 Com a finalidade final de se conseguir implementar um jogo padrão completo de Blackjack, temos como finalidades do nosso sistema a presença de:
 
@@ -27,11 +26,5 @@ Com a finalidade final de se conseguir implementar um jogo padrão completo de B
 - Distribuição de cartas baseada em um algoritmo que simula a aleatoriedade típica do jogo.
 
 
-## Principais Classes e seus principais Métodos e Atributos
-O sistema possui como sendo as principais classes:
-- Game.java -> Classe que vai tratar da dinâmica do jogo;
-- Card.java -> Classe que vai tratar da dinâmica das cartas;
-- CartaMesa -> Classe que trata da mão da mesa;
-- CartaJogador -> Classe que trata da mão do jogador;
-- UI.java -> Classe que vai tratar da interface do jogo;
-- ActionHandler.java -> Classe que vai tratar das ações dos botões.
+
+
