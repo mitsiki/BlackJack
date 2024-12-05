@@ -1,8 +1,5 @@
 package br.edu.ifsp;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 /* 
  * Classe que vai tratar da dinâmica do jogo
 */
