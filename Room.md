@@ -16,8 +16,6 @@ https://www.ryisnow.online/2021/05/java-sample-code-black-jack-game.html
 O sistema possui como sendo as principais classes:
 - Game.java -> Classe que vai tratar da dinâmica do jogo;
 - Card.java -> Classe que vai tratar da dinâmica das cartas;
-- CartaMesa -> Classe que trata da mão da mesa;
-- CartaJogador -> Classe que trata da mão do jogador;
 - UI.java -> Classe que vai tratar da interface do jogo;
 - ActionHandler.java -> Classe que vai tratar das ações dos botões.
 
