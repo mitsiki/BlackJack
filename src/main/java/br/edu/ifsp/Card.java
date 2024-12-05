@@ -14,7 +14,7 @@ public class Card {
         this.value = value;
         this.type = type;
     }
-
+    //teste
     ArrayList<Card> deck;
 
     public static void buildDeck() {
