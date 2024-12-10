@@ -169,7 +169,7 @@
             </Text>
             <ImageView fx:id="crupieImagem" fitHeight="91.0" fitWidth="96.0" layoutX="210.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/image-removebg-preview.png" />
+                  <Image url="@BlackJack/src/main/resources/br/edu/ifsp/Imagens/dealer.crupiê.png"/>
                </image>
             </ImageView>
          </children>

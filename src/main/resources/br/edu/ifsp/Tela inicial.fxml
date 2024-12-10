@@ -88,7 +88,7 @@
       <children>
             <ImageView fitHeight="214.0" fitWidth="337.0" layoutX="151.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Pictures/Screenshots/Captura%20de%20tela%202024-11-28%2016222.png" />
+                  <Image url="@BlackJack/src/main/resources/br/edu/ifsp/Imagens/Logotipo.png" />
                </image>
             </ImageView>
             <Button fx:id="botaoComecar" layoutX="288.0" layoutY="218.0" mnemonicParsing="false" text="Começar">
