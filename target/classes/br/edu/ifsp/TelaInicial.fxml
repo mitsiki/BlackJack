@@ -88,20 +88,15 @@
       <children>
             <ImageView fitHeight="214.0" fitWidth="337.0" layoutX="151.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@BlackJack/src/main/resources/br/edu/ifsp/Imagens/Logotipo.png" />
+                  <Image url="@BlackJack\src\main\resources\br\edu\ifsp\Imagens\Logotipo.png" />
                </image>
             </ImageView>
-            <Button fx:id="botaoComecar" layoutX="288.0" layoutY="218.0" mnemonicParsing="false" text="Começar">
+            <Button fx:id="botaoComecar" layoutX="288.0" layoutY="218.0" mnemonicParsing="false" onAction="#trocaParaTelaPartida" text="Começar">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="botaoSair" layoutX="302.0" layoutY="264.0" mnemonicParsing="false" text="Sair">
-               <font>
-                  <Font name="Comic Sans MS" size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="botaoConfig" layoutX="534.0" layoutY="14.0" mnemonicParsing="false" text="Configurações">
+            <Button fx:id="botaoSair" layoutX="302.0" layoutY="264.0" mnemonicParsing="false" onAction="#fechaJogo" text="Sair">
                <font>
                   <Font name="Comic Sans MS" size="12.0" />
                </font>
