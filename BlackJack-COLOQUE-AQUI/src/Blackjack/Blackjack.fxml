@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Blackjack.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TextField fx:id="betTextField" layoutX="14.0" layoutY="418.0" onAction="#betPressed" prefHeight="27.0" prefWidth="89.0" promptText="Enter bet" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="7.0" />
+            <Button fx:id="betButton" layoutX="106.0" layoutY="418.0" mnemonicParsing="false" onAction="#betPressed" text="Apostar" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="106.0" />
+            <ButtonBar layoutX="433.0" layoutY="411.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="7.0">
+              <buttons>
+                <Button fx:id="hitButton" mnemonicParsing="false" onAction="#hitPressed" text="Bater" />
+                  <Button fx:id="stayButton" layoutX="140.0" layoutY="17.0" mnemonicParsing="false" onAction="#stayPressed" text="Manter" />
+              </buttons>
+            </ButtonBar>
+            <GridPane hgap="8.0" layoutX="7.0" layoutY="328.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="7.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Aposta:" GridPane.rowIndex="2" />
+                  <Label text="Dinheiro Jogador:" GridPane.rowIndex="1" />
+                  <Label text="Dinheiro Crûpie:" />
+                  <Label fx:id="dealerMoneyLabel" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="playerMoneyLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="currentBetLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane hgap="8.0" layoutX="533.0" layoutY="358.0" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="7.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Total do Jogador:" GridPane.rowIndex="1" />
+                  <Label text="Total do Crûpie:" />
+                  <Label fx:id="dealerTotalLabel" text="N/A" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label fx:id="playerTotalLabel" text="N/A" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+            <Label fx:id="dealerFlowPaneTitle" alignment="TOP_CENTER" layoutX="277.0" layoutY="6.0" text="Mão Crûpie" underline="true" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="277.0" AnchorPane.topAnchor="0.0" />
+            <GridPane alignment="CENTER" hgap="10.0" layoutX="220.0" layoutY="445.0" minHeight="30.0" minWidth="200.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="220.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="nextRoundButton" mnemonicParsing="false" onAction="#nextRoundPressed" prefHeight="27.0" prefWidth="90.0" text="Próxima Rodada" GridPane.columnIndex="1" />
+                  <Button fx:id="newGameButton" mnemonicParsing="false" onAction="#initialize" prefHeight="27.0" prefWidth="90.0" text="Novo Jogo" />
+               </children>
+            </GridPane>
+            <Label fx:id="winnerLabel" alignment="CENTER" layoutX="151.0" layoutY="417.0" prefHeight="26.0" prefWidth="338.0" text="Label" textAlignment="CENTER" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="151.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <FlowPane fx:id="dealerFlowPane" alignment="TOP_CENTER" layoutY="17.0" prefHeight="160.0" prefWidth="640.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="17.0" />
+            <Label fx:id="playerFlowPaneTitle" alignment="TOP_CENTER" layoutX="278.0" layoutY="183.0" text="Mão Jogador" underline="true" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="277.0" AnchorPane.topAnchor="183.0" />
+            <FlowPane fx:id="playerFlowPane" alignment="TOP_CENTER" layoutY="200.0" prefHeight="160.0" prefWidth="640.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0" />
+            <Label fx:id="gameOverLabel" alignment="CENTER" layoutX="151.0" layoutY="75.0" prefHeight="292.0" prefWidth="338.0" text="game over placeholder" textAlignment="CENTER" textFill="RED" wrapText="true" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="151.0" AnchorPane.topAnchor="75.0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
