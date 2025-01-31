@@ -1,5 +1,7 @@
 package com.blackjack;
 
+import java.net.URL;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -85,11 +87,41 @@ public class SecondaryController {
     }
 
     private ImageView criarImageView(Carta carta) {
-        String nomeArquivo = carta.getValor().toLowerCase() + "_" + carta.getNaipe().toLowerCase() + ".png";
-        Image imagemCarta = new Image(getClass().getResource("/com/blackjack/cartas/" + nomeArquivo).toExternalForm());
+        // Converte o valor e o naipe para o formato dos nomes dos arquivos
+        String valor = converterValorParaIngles(carta.getValor());
+        String naipe = converterNaipeParaIngles(carta.getNaipe());
+        String nomeArquivo = valor + naipe + ".png";
+    
+        // Carrega a imagem da carta
+        URL url = getClass().getResource("/com/blackjack/cards/" + nomeArquivo);
+        if (url == null) {
+            System.err.println("Arquivo não encontrado: " + nomeArquivo);
+            return new ImageView(); // Retorna um ImageView vazio
+        }
+        Image imagemCarta = new Image(url.toExternalForm());
         ImageView imageView = new ImageView(imagemCarta);
         imageView.setFitWidth(100);
         imageView.setPreserveRatio(true);
         return imageView;
+    }
+    
+    private String converterValorParaIngles(String valor) {
+        switch (valor) {
+            case "Ás": return "ace";
+            case "Valete": return "J";
+            case "Dama": return "Q";
+            case "Rei": return "K";
+            default: return valor; // 2, 3, 4, ..., 10
+        }
+    }
+    
+    private String converterNaipeParaIngles(String naipe) {
+        switch (naipe) {
+            case "Copas": return "hearts";
+            case "Espadas": return "spades";
+            case "Ouros": return "diamonds";
+            case "Paus": return "clubs";
+            default: throw new IllegalArgumentException("Naipe inválido: " + naipe);
+        }
     }
 }
