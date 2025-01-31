@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" spacing="20" style="-fx-padding: 20; -fx-background-color: #2E8B57;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blackjack.SecondaryController">
+    <Label fx:id="dealerLabel" text="Dealer: Valor" style="-fx-font-size: 18; -fx-text-fill: white;" />
+    <HBox fx:id="dealerCartas" spacing="10" style="-fx-background-color: #FFFFFF; -fx-padding: 10;" />
+    <Label fx:id="jogadorLabel" text="Você: Valor" style="-fx-font-size: 18; -fx-text-fill: white;" />
+    <HBox fx:id="jogadorCartas" spacing="10" style="-fx-background-color: #FFFFFF; -fx-padding: 10;" />
+    <Button fx:id="btnPedirCarta" text="Pedir Carta" style="-fx-font-size: 18; -fx-min-width: 150;" onAction="#pedirCarta" />
+    <Button fx:id="btnManter" text="Manter" style="-fx-font-size: 18; -fx-min-width: 150;" onAction="#manter" />
+</VBox>
