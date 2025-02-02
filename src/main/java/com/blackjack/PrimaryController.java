@@ -23,6 +23,7 @@ public class PrimaryController {
             Stage stage = (Stage) btnComecar.getScene().getWindow();
             stage.setScene(new Scene(root, 800, 600));
         } catch (Exception e) {
+            System.err.println("Erro ao carregar o FXML ou ao alterar a cena:");
             e.printStackTrace();
         }
     }

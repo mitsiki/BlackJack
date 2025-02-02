@@ -114,11 +114,12 @@ public class SecondaryController {
 
     }
 
+    
     private ImageView criarImageView(Carta carta) {
         // Converte o valor e o naipe para o formato dos nomes dos arquivos
-        String valor = converterValorParaIngles(carta.getValor());
-        String naipe = converterNaipeParaIngles(carta.getNaipe());
-        String nomeArquivo = valor + naipe + ".png";
+        String simbolo = carta.getSimbolo();
+        String naipe = carta.getNaipe();
+        String nomeArquivo = simbolo + naipe + ".png";
     
         // Carrega a imagem da carta
         URL url = getClass().getResource("/com/blackjack/cards/" + nomeArquivo);
@@ -131,25 +132,5 @@ public class SecondaryController {
         imageView.setFitWidth(100);
         imageView.setPreserveRatio(true);
         return imageView;
-    }
-    
-    private String converterValorParaIngles(String valor) {
-        switch (valor) {
-            case "Ás": return "A";
-            case "Valete": return "J";
-            case "Dama": return "Q";
-            case "Rei": return "K";
-            default: return valor; // 2, 3, 4, ..., 10
-        }
-    }
-    
-    private String converterNaipeParaIngles(String naipe) {
-        switch (naipe) {
-            case "Copas": return "hearts";
-            case "Espadas": return "spades";
-            case "Ouros": return "diamonds";
-            case "Paus": return "clubs";
-            default: throw new IllegalArgumentException("Naipe inválido: " + naipe);
-        }
     }
 }

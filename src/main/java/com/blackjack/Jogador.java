@@ -22,17 +22,17 @@ public class Jogador {
     // Adiciona uma carta na mão do jogador.
     public void receberCarta(Carta carta) {
         mao.add(carta);
-        pontuacao += carta.getValor();
         
-        // Ajusta o valor do Ás se a pontuação ultrapassar 21
-        if (pontuacao > 21) {
+        // Ajusta o valor do Ás se não for uma as duas primeiras cartas
+        if (mao.size() > 2) {
             for (Carta c : mao) {
-                if (c.getNaipe().equals("Ás") && c.getValor() == 11) {
-                    c = new Carta(c.getNaipe(), c.getSimbolo(), 1); // Ás agora vale 1
-                    pontuacao -= 10; // Ajusta a pontuação
+                if (c.getSimbolo().equals("A") && c.getValor() == 11) {
+                    c.setValor(1); // Ajusta o valor do Ás para 1
+                    System.out.println("Ajustou o valor do Ás");
                 }
             }
         }
+        pontuacao += carta.getValor();
     }
 
     public int getPontuacao() {
@@ -47,4 +47,5 @@ public class Jogador {
         mao.clear();
         pontuacao = 0;
     }
+    
 }

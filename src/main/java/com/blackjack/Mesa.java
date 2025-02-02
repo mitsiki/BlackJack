@@ -16,7 +16,6 @@ public class Mesa {
     }
 
     public void iniciarJogo() {
-        baralho.embaralhar();
         jogador.limparMao();
         dealer.limparMao();
 

@@ -32,6 +32,10 @@ public class Carta {
         return valor; 
     }
 
+    public void setValor(int valor) {
+        this.valor = valor;
+    }
+
     @Override
     public String toString() {
         return simbolo + " de " + naipe;
