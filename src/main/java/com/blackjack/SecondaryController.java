@@ -114,12 +114,8 @@ public class SecondaryController {
 
     }
 
-    
     private ImageView criarImageView(Carta carta) {
-        // Converte o valor e o naipe para o formato dos nomes dos arquivos
-        String simbolo = carta.getSimbolo();
-        String naipe = carta.getNaipe();
-        String nomeArquivo = simbolo + naipe + ".png";
+        String nomeArquivo = carta.getSimbolo() + carta.getNaipe() + ".png";
     
         // Carrega a imagem da carta
         URL url = getClass().getResource("/com/blackjack/cards/" + nomeArquivo);
@@ -133,4 +129,5 @@ public class SecondaryController {
         imageView.setPreserveRatio(true);
         return imageView;
     }
+
 }
