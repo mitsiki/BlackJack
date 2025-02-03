@@ -32,6 +32,7 @@ public class Carta {
         return valor; 
     }
 
+    // Setters
     public void setValor(int valor) {
         this.valor = valor;
     }
